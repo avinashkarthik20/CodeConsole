@@ -7,5 +7,5 @@ public enum Commands {
 	R,
 	B,
 	Q;
-	
+		
 }
