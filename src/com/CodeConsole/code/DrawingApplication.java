@@ -25,6 +25,7 @@ public class DrawingApplication {
 		map.put(0, Commands.C);
 		if(String.valueOf(command.charAt(0)).equals(map.get(0).toString())){
 					String[] cmd = command.split(" ");
+					canvas = new Canvas();
 					canvas.createCanvas(Integer.parseInt(cmd[1]),Integer.parseInt(cmd[2]));
 					canvas.display();
 		}
