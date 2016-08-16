@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class DrawingApplication {
 
-	static Canvas canvas;
+	static Canvasshapes canvas;
 	static Map<Integer, Commands> map ;
 	
 	public static void main(String[] args) {		
@@ -34,7 +34,7 @@ public class DrawingApplication {
 	private static void draw(String command){
 		if(String.valueOf(command.charAt(0)).equals(map.get(0).toString())){
 					String[] cmd = command.split(" ");
-					canvas = new Canvas();
+					canvas = new Canvasshapes();
 					canvas.createCanvas(Integer.parseInt(cmd[1]),Integer.parseInt(cmd[2]));
 					canvas.display();
 		}
@@ -43,6 +43,12 @@ public class DrawingApplication {
 			canvas.drawBorder(Integer.parseInt(cmd[1]),Integer.parseInt(cmd[2]), Integer.parseInt(cmd[3]),Integer.parseInt(cmd[4]),"X");
 			canvas.display();
 		}
+		if(String.valueOf(command.charAt(0)).equals(map.get(2).toString())){
+			String[] cmd = command.split(" ");
+			canvas.drawBorder(Integer.parseInt(cmd[1]),Integer.parseInt(cmd[2]), Integer.parseInt(cmd[3]),Integer.parseInt(cmd[4]),"X");
+			canvas.display();
+		}
+		
     }
 } 
 		
