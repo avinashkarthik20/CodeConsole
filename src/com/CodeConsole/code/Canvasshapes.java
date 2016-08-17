@@ -40,7 +40,35 @@ public class Canvasshapes {
 		drawLine(x1,y2,x1,y1);
 	}
 	
-	
+	public void bucketFill(int x, int y, String color)throws NumberFormatException, InterruptedException{
+		try {
+			checkifnull();
+			if(Integer.parseInt(canvasBorder[y][x])!=0)
+				return;
+			if(x > 0 || x < this.h || y > 0 || y  < this.w) {
+					if(Integer.parseInt(canvasBorder[y][x]) == 0){
+						canvasBorder[y][x] = color;
+						bucketFill(x+1,y, color);
+						bucketFill(x-1,y, color);
+						bucketFill(x,y-1, color);
+						bucketFill(x,y+1, color);
+			}
+			}
+		} catch (Exception e) {
+			
+		}
+		
+    }
+
+    private void checkifnull(){
+    	for(int i=0;i<this.h;i++) {
+			for(int j=0;j<this.w;j++) {
+			if(canvasBorder[i][j]!= "-" && canvasBorder[i][j] != "|" && canvasBorder[i][j]!= "x" && canvasBorder[i][j] == null){
+				 canvasBorder[i][j] = String.valueOf(0);
+			}
+			}
+    	}
+    }
 
 	public void display() {		
 		for(int i=0;i<this.h;i++) {
