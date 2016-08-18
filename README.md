@@ -51,3 +51,12 @@ behaviour of this is the same as that of the "bucket fill" tool in paint
 programs.
 
 Q Should quit the program.
+
+Errors & Implementations:
+
+* The bucketfill fuction can lead to stackoverflow exception.
+* The 2D Array items takes null by default, and also displays null when a canvas is drawn, so I have altreded the print statement to not to show null
+* As the 2D Array items has null values during Bucketfill the null vales are changed to 0 so that the bucketfill can work efficiently.
+* The Commands are decalared are Enum beacuse when the application grows in the future it would be easy to add the commands and use it in the draw function instead of having a switch case for all the commands which is lot of code and not a good design pattern.
+* Tests for the Hasp and the draw function is done.
+* The application is developed in the Eclipse IDE and Git
