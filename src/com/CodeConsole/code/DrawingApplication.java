@@ -22,15 +22,16 @@ public class DrawingApplication {
 		scan.close();
 	}
 	
-	private static void mapCommands() {
+	public static Map mapCommands() {
 		map = new HashMap<Integer, Commands>();
 		map.put(0,Commands.C);
 		map.put(1,Commands.L);
 		map.put(2,Commands.R);
 		map.put(3,Commands.B);
+		return map;
 	}
 
-	private static void draw(String command) throws NumberFormatException, InterruptedException{
+	public static void draw(String command) throws NumberFormatException, InterruptedException{
 		
 		try {
 			if(String.valueOf(command.charAt(0)).equals(map.get(0).toString())){

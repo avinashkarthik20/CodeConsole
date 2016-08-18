@@ -74,9 +74,15 @@ public class Canvasshapes {
 		for(int i=0;i<this.h;i++) {
 			for(int j=0;j<this.w;j++) {
 			System.out.print((canvasBorder[i][j] == null) ? " " : canvasBorder[i][j]);
+			getCanvasBorder(canvasBorder[i][j]);
 			}
 			System.out.println();
 		}
+	}
+	
+	public String getCanvasBorder(String canvasBorder2){
+		return canvasBorder[w][h];
+		
 	}
 
 }
